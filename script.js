@@ -8,32 +8,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form Validation
-document.getElementById('contact-form').addEventListener('submit', function(event) {
+// Form Validation for Schedule Form
+document.getElementById('schedule-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
+    const pickup = document.getElementById('pickup').value.trim();
+    const dropoff = document.getElementById('dropoff').value.trim();
+    const date = document.getElementById('date').value.trim();
+    const time = document.getElementById('time').value.trim();
 
-    if (name === '' || email === '' || message === '') {
+    if (pickup === '' || dropoff === '' || date === '' || time === '') {
         alert('Please fill in all fields.');
         return;
     }
 
-    if (!validateEmail(email)) {
-        alert('Please enter a valid email address.');
-        return;
-    }
-
-    alert('Thank you for your message. We will get back to you shortly.');
+    alert('Your ride has been scheduled. Thank you!');
     this.reset();
 });
-
-function validateEmail(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()\[\]\\.,;:\s@"]+\.)+[^<>()\[\]\\.,;:\s@"]{2,})$/i;
-    return re.test(String(email).toLowerCase());
-}
 
 // Navigation Bar Dynamic Behavior
 window.addEventListener('scroll', function() {
