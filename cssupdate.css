@@ -1,0 +1,11 @@
+header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header.sticky .container {
+    background: #333;
+    border-bottom: none;
+}

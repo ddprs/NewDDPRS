@@ -1,0 +1,12 @@
+{
+  "name": "dd-ride-service",
+  "version": "1.0.0",
+  "description": "A Node.js web server for DD Ride Service website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
